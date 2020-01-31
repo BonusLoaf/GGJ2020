@@ -12,17 +12,14 @@ public class GameController : MonoBehaviour
     private int numberOfMechanicUnlocks;
 
 
-    public static GameController Instance { get { return instance; } }
-
-    private void Awake()
-    {
-        if (instance != null && instance != this)
+    public static GameController Instance {
+        get
         {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            instance = this;
+            if (instance == null)
+            {
+                instance = new GameController();
+            }
+            return instance;
         }
     }
 
@@ -42,10 +39,13 @@ public class GameController : MonoBehaviour
     {
         numberOfMechanicUnlocks++;
         print(numberOfMechanicUnlocks);
-        //switch(numberOfMechanicUnlocks)
-        //{
-
-        //}
+        switch(numberOfMechanicUnlocks)
+        {
+            case 1:
+                print("Movement Unlocked");
+                player.SendMessage("enableTopDownControlls");
+                break;
+        }
     }
 
 }

@@ -9,21 +9,26 @@ public class PlayerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameObject.GetComponent<TopDownMovementScript>().enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    private void OnTriggerEnter2D(Collision2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.transform.tag == "GlitchParticle")
+        if (col.gameObject.tag == "GlitchParticle") // collected glitch particle
         {
-            print("Should send message");
             gc.SendMessage("UnlockNextMechanic");
+            col.SendMessage("collected");
         }
+    }
+
+    public void enableTopDownControlls()
+    {
+        gameObject.GetComponent<TopDownMovementScript>().enabled = true;
     }
 }
