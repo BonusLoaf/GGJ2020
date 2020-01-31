@@ -20,6 +20,7 @@ public class LoadNextScene : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
+        Debug.Log("yay");
 
         if(collision.transform.name == "Player")
         {
