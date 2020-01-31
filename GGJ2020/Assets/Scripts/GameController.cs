@@ -41,10 +41,11 @@ public class GameController : MonoBehaviour
     public void UnlockNextMechanic()
     {
         numberOfMechanicUnlocks++;
-        switch(numberOfMechanicUnlocks)
-        {
+        print(numberOfMechanicUnlocks);
+        //switch(numberOfMechanicUnlocks)
+        //{
 
-        }
+        //}
     }
 
 }
