@@ -42,10 +42,13 @@ public class GameController : MonoBehaviour
     {
         numberOfMechanicUnlocks++;
         print(numberOfMechanicUnlocks);
-        //switch(numberOfMechanicUnlocks)
-        //{
-
-        //}
+        switch(numberOfMechanicUnlocks)
+        {
+            case 1:
+                print("Movement Unlocked");
+                player.SendMessage("enableTopDownControlls");
+                break;
+        }
     }
 
 }

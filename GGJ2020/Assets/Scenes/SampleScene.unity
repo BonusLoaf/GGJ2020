@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 68553108}
   - component: {fileID: 68553107}
   - component: {fileID: 68553106}
+  - component: {fileID: 68553110}
   m_Layer: 0
   m_Name: GlitchParticle
   m_TagString: GlitchParticle
@@ -251,6 +252,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &68553110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68553105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0080cbbf88b94c049bb17f5312282949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &443615394
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,7 +356,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443615394}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 762e89f197cdb714899c2d75f58b1aea, type: 3}
   m_Name: 
