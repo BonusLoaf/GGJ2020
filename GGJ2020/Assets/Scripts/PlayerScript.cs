@@ -10,6 +10,10 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         gameObject.GetComponent<TopDownMovementScript>().enabled = false;
+
+        
+
+
     }
 
     // Update is called once per frame
@@ -22,7 +26,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (col.gameObject.tag == "GlitchParticle") // collected glitch particle
         {
-            gc.SendMessage("UnlockNextMechanic");
+            gc.SendMessage("UnlockNextMechanic", 1);
             col.SendMessage("collected");
         }
     }
