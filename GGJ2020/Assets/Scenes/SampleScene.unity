@@ -249,7 +249,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &443615394
 GameObject:
@@ -264,6 +264,7 @@ GameObject:
   - component: {fileID: 443615399}
   - component: {fileID: 443615398}
   - component: {fileID: 443615397}
+  - component: {fileID: 443615400}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -395,6 +396,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &443615400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443615394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d7d18eabf70de43aa33c2b7a781bc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gc: {fileID: 1369063782}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,7 +521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5afd860fb4f8cdb4cb520769f7ab4a78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 443615394}
   mainCamera: {fileID: 519420031}
 --- !u!4 &1369063784
 Transform:
@@ -521,5 +535,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
