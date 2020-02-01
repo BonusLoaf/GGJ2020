@@ -41,9 +41,11 @@ public class Draggable : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.tag == "DropZone")
+        DropZone dz = col.gameObject.GetComponent<DropZone>();
+
+        if(dz != null)
         {
-            print("Dropped");
+            dz.PlacePiece();
 
             Transform snap = col.gameObject.transform.GetChild(pieceNum - 1);
 

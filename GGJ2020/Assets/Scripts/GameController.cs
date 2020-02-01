@@ -65,7 +65,6 @@ public class GameController : MonoBehaviour
     public void UnlockNextMechanic(int add)
     {
         numberOfMechanicUnlocks = numberOfMechanicUnlocks + add;
-        print(numberOfMechanicUnlocks);
 
 
         if(numberOfMechanicUnlocks >= 1) // unlocks movement
