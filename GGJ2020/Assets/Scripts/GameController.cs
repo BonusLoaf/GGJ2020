@@ -20,11 +20,6 @@ public class GameController : MonoBehaviour
     {
         numberOfMechanicUnlocks = PlayerPrefs.GetInt("mechanics");
 
-
-        Debug.Log(numberOfMechanicUnlocks);
-
-
-
         UnlockNextMechanic(0);
     }
 
@@ -68,14 +63,26 @@ public class GameController : MonoBehaviour
     {
         numberOfMechanicUnlocks = numberOfMechanicUnlocks + add;
         print(numberOfMechanicUnlocks);
-        switch(numberOfMechanicUnlocks)
+
+
+        if(numberOfMechanicUnlocks >= 1)
         {
-            case 1:
-                print("Movement Unlocked");
-                player.SendMessage("enableTopDownControlls");
-                PlayerPrefs.SetInt("mechanics", numberOfMechanicUnlocks);
-                break;
+
+            print("Movement Unlocked");
+            player.SendMessage("enableTopDownControlls");
+            PlayerPrefs.SetInt("mechanics", numberOfMechanicUnlocks);
+            
         }
+        if(numberOfMechanicUnlocks >= 2)
+        {
+
+            print("Gravity Unlocked");
+            player.GetComponent<Rigidbody2D>().gravityScale = 1;
+
+
+        }
+
+
     }
 
 }
