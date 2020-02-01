@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\PlayerScript.cs" />
     <Compile Include="Assets\Scripts\ResetPrefs.cs" />
     <Compile Include="Assets\Scripts\TopDownMovementScript.cs" />
+    <Compile Include="Assets\SmoothCameraFollow.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/wmasters/Documents/github/GGJ2020/GGJ2020/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
