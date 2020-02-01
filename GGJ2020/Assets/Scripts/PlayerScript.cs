@@ -12,7 +12,10 @@ public class PlayerScript : MonoBehaviour
         //gameObject.GetComponent<TopDownMovementScript>().enabled = false;
 
         //gameObject.GetComponent<PlatformerMovementScript>().enabled = false;
-
+        if(!gc)
+        {
+            Debug.LogError("No game controller set in the playerScript");
+        }
 
     }
 
