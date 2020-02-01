@@ -1637,6 +1637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gc: {fileID: 1369063782}
+  face: {fileID: 0}
 --- !u!114 &443615401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3981,6 +3982,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4552211364459498880, guid: 71827796c1abe4d458b48b40e631e0b7,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2298f44cd28f1274181f73390c6080f1,
+        type: 3}
+    - target: {fileID: 4552211364459498880, guid: 71827796c1abe4d458b48b40e631e0b7,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552211364459498880, guid: 71827796c1abe4d458b48b40e631e0b7,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552211364459498880, guid: 71827796c1abe4d458b48b40e631e0b7,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4552211364459498881, guid: 71827796c1abe4d458b48b40e631e0b7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4041,6 +4063,12 @@ PrefabInstance:
       propertyPath: gc
       value: 
       objectReference: {fileID: 1369063782}
+    - target: {fileID: 4552211364459498884, guid: 71827796c1abe4d458b48b40e631e0b7,
+        type: 3}
+      propertyPath: face
+      value: 
+      objectReference: {fileID: 21300000, guid: 2298f44cd28f1274181f73390c6080f1,
+        type: 3}
     - target: {fileID: 4552211364459498906, guid: 71827796c1abe4d458b48b40e631e0b7,
         type: 3}
       propertyPath: m_Name

@@ -6,6 +6,9 @@ public class PlayerScript : MonoBehaviour
 {
     public GameObject gc;
 
+
+    public Animator emotions;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +16,7 @@ public class PlayerScript : MonoBehaviour
 
         //gameObject.GetComponent<PlatformerMovementScript>().enabled = false;
 
-
+        
     }
 
     // Update is called once per frame
@@ -65,5 +68,22 @@ public class PlayerScript : MonoBehaviour
     public void setAbilityToJump(bool canJump)
     {
         gameObject.GetComponent<PlatformerMovementScript>().setJumpEnabled(canJump);
+    }
+
+
+    public void setFace()
+    {
+
+        emotions.SetTrigger("FaceUnlocked");
+
+    }
+
+    public void setOwO()
+    {
+
+        emotions.SetTrigger("EmotionsUnlocked");
+
+
+
     }
 }

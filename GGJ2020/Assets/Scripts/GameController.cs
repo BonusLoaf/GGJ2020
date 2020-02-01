@@ -97,7 +97,16 @@ public class GameController : MonoBehaviour
             print("Jumping unlocked");
             player.SendMessage("setAbilityToJump", true);
         }
-
+        if (numberOfMechanicUnlocks >= 5) // unlocks jumping
+        {
+            print("Face Unlocked");
+            player.SendMessage("setFace");
+        }
+        if (numberOfMechanicUnlocks >= 6) // unlocks jumping
+        {
+            print("Emotions Unlocked");
+            player.SendMessage("setOwO");
+        }
 
     }
 
