@@ -7,6 +7,8 @@ public class PlatformerMovementScript : MonoBehaviour
 
     public float speed = 10;
 
+    public bool jumpEnabled;
+
     private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
@@ -22,14 +24,20 @@ public class PlatformerMovementScript : MonoBehaviour
         rb.velocity = new Vector2(x * speed, rb.velocity.y);
 
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && jumpEnabled)
         {
-
-            rb.velocity = new Vector2(0,10);
+            AttemptJump();
             
-            
-          
-
         }
+    }
+
+    public void setJumpEnabled(bool isEnabled)
+    {
+        jumpEnabled = isEnabled;
+    }
+
+    void AttemptJump()
+    {
+        rb.velocity = new Vector2(0, 10);
     }
 }

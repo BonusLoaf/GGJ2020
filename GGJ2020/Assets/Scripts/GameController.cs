@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour
 
     private static GameController instance;
 
-    private int numberOfMechanicUnlocks = 0;
+    public int numberOfMechanicUnlocks = 0;
 
 
 
@@ -56,7 +56,10 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+            UnlockNextMechanic(1);
+        }
     }
 
     public void UnlockNextMechanic(int add)
@@ -75,11 +78,9 @@ public class GameController : MonoBehaviour
         }
         if(numberOfMechanicUnlocks >= 2)
         {
-
             print("Gravity Unlocked");
-            player.GetComponent<Rigidbody2D>().gravityScale = 1;
-
-
+            player.SendMessage("enablePlatformerControlls");
+            player.SendMessage("enableGravity");
         }
 
 

@@ -31,8 +31,25 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+    public void enableGravity()
+    {
+        gameObject.GetComponent<Rigidbody2D>().gravityScale = 2;
+    }
+
+    public void disableGravity()
+    {
+        gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
+    }
+
     public void enableTopDownControlls()
     {
+        gameObject.GetComponent<PlatformerMovementScript>().enabled = false;
         gameObject.GetComponent<TopDownMovementScript>().enabled = true;
+    }
+
+    public void enablePlatformerControlls()
+    {
+        gameObject.GetComponent<TopDownMovementScript>().enabled = false;
+        gameObject.GetComponent<PlatformerMovementScript>().enabled = true;
     }
 }
