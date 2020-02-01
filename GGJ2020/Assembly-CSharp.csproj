@@ -62,9 +62,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Draggable.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\GlitchParticleScript.cs" />
     <Compile Include="Assets\Scripts\LoadNextScene.cs" />
+    <Compile Include="Assets\Scripts\MousePointer.cs" />
     <Compile Include="Assets\Scripts\PlatformerMovementScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScript.cs" />
     <Compile Include="Assets\Scripts\ResetPrefs.cs" />

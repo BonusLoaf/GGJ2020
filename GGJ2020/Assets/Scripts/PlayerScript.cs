@@ -9,9 +9,9 @@ public class PlayerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.GetComponent<TopDownMovementScript>().enabled = false;
+        //gameObject.GetComponent<TopDownMovementScript>().enabled = false;
 
-        gameObject.GetComponent<PlatformerMovementScript>().enabled = false;
+        //gameObject.GetComponent<PlatformerMovementScript>().enabled = false;
 
 
     }
@@ -43,7 +43,7 @@ public class PlayerScript : MonoBehaviour
 
     public void enableTopDownControlls()
     {
-        gameObject.GetComponent<PlatformerMovementScript>().enabled = false;
+        //gameObject.GetComponent<PlatformerMovementScript>().enabled = false;
         gameObject.GetComponent<TopDownMovementScript>().enabled = true;
     }
 
