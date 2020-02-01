@@ -9,10 +9,17 @@ public class PlatformerMovementScript : MonoBehaviour
 
     public bool jumpEnabled;
 
+    public GameObject raycastOrigin;
+
     private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
+        if(raycastOrigin == null)
+        {
+            Debug.LogError("Please reference the raycast origin game object in the Platformer movement script");
+        }
+
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
@@ -38,6 +45,30 @@ public class PlatformerMovementScript : MonoBehaviour
 
     void AttemptJump()
     {
-        rb.velocity = new Vector2(0, 10);
+        print(canJump());
+        if(canJump())
+        {
+            rb.velocity = new Vector2(0, 10);
+
+        }
+        
+    }
+
+
+
+
+
+    private bool canJump() // Sends Raycast to check if the player is on the floor
+    {
+        Debug.DrawRay(raycastOrigin.transform.position, Vector2.down, Color.green, 3f); // draws the raycast
+
+        RaycastHit2D hit = Physics2D.Raycast(raycastOrigin.transform.position, Vector2.down, 0.01f);
+        if (hit.collider != null)
+        {
+            return true;
+        }
+
+
+        return false;
     }
 }
