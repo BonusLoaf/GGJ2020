@@ -685,6 +685,7 @@ MonoBehaviour:
   speed: 10
   jumpEnabled: 0
   raycastOrigin: {fileID: 2091347498}
+  raycastLength: 0.1
 --- !u!114 &1978186768
 MonoBehaviour:
   m_ObjectHideFlags: 0
