@@ -19,6 +19,13 @@ public class PlatformerMovementScript : MonoBehaviour
     public GameObject[] raycastOrigin;
     public float raycastLength = 0.01f;
 
+    // Only for once the player has unlocked the characters full body
+    public GameObject characterBody;
+    public GameObject characterRollingBody;
+
+    public PhysicsMaterial2D normalMat;
+    public PhysicsMaterial2D bouncyMat;
+
     private int bounces;
 
     private Rigidbody2D rb;
@@ -35,6 +42,20 @@ public class PlatformerMovementScript : MonoBehaviour
         }
 
         rb = gameObject.GetComponent<Rigidbody2D>();
+
+
+        if((dashEnabled && characterBody && characterRollingBody))
+        {
+            characterBody.SetActive(true);
+            characterRollingBody.SetActive(false);
+        } else
+        {
+            Debug.LogError("Error: dashing is enabled and no reference to the characters full body/ rolling child gameobject is found");
+        }
+        if(!(dashEnabled && normalMat && bouncyMat))
+        {
+            Debug.LogError("Error: dashing is enabled and no reference to the bouncy and normal physics material are found");
+        }
     }
 
     // Update is called once per frame
@@ -116,6 +137,7 @@ public class PlatformerMovementScript : MonoBehaviour
     private void dash()
     {
         canWalk = false;
+        switchToRollingBody();
         
 
         if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.5f)
@@ -131,8 +153,11 @@ public class PlatformerMovementScript : MonoBehaviour
         } else if(Mathf.Abs(Input.GetAxisRaw("Vertical")) > 0.5f)
         {
             rb.AddForce(Vector3.up * dashSpeed * Time.deltaTime * Input.GetAxisRaw("Vertical"), ForceMode2D.Impulse);
+        } else
+        {
+            rb.AddForce(Vector3.up * dashSpeed * Time.deltaTime, ForceMode2D.Impulse);
         }
-
+        rb.sharedMaterial = bouncyMat;
 
         bounces = 0;
         hasDashed = true;
@@ -145,6 +170,32 @@ public class PlatformerMovementScript : MonoBehaviour
         if(bounces >= 4)
         {
             canWalk = true;
+            rb.sharedMaterial = normalMat;
+            switchToNormalBody();
+        }
+    }
+
+    public void switchToNormalBody()
+    {
+        if(characterBody && characterRollingBody)
+        {
+            characterBody.SetActive(true);
+            characterRollingBody.SetActive(false);
+        } else
+        {
+            Debug.LogError("Error: attempting to switch to normal body but no reference to the characters full body/ rolling child gameobject is found");
+        }
+    }
+
+    public void switchToRollingBody()
+    {
+        if (characterBody && characterRollingBody)
+        {
+            characterBody.SetActive(false);
+            characterRollingBody.SetActive(true);
+        } else 
+        {
+            Debug.LogError("Error: attempting to switch to rolling body but no reference to the characters full body/ rolling child gameobject is found");
         }
     }
 }
