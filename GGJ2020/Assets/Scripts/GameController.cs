@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public GameObject player;
-    public Camera mainCamera;
+    public GameObject mainCamera;
 
     private static GameController instance;
 
@@ -28,10 +28,12 @@ public class GameController : MonoBehaviour
     {
 
 
-        
 
-        Invoke("checkMechs", 0.1f);
-        
+
+        //Invoke("checkMechs", 0.1f);
+
+
+        UnlockNextMechanic(0);
         
     }
 
@@ -73,16 +75,22 @@ public class GameController : MonoBehaviour
 
             print("Movement Unlocked");
             player.SendMessage("enableTopDownControlls");
-            PlayerPrefs.SetInt("mechanics", numberOfMechanicUnlocks);
+            //PlayerPrefs.SetInt("mechanics", numberOfMechanicUnlocks);
             
         }
         if(numberOfMechanicUnlocks >= 2) // unlocks gravity (switches to platformer script)
         {
             print("Gravity Unlocked");
-            player.SendMessage("enablePlatformerControlls");
+            player.SendMessage("disableTopDownControlls");
             player.SendMessage("enableGravity");
-        } 
-        if(numberOfMechanicUnlocks >= 3) // unlocks jumping
+        }
+        if (numberOfMechanicUnlocks >= 3) // unlocks camera following
+        {
+            print("Camera Fixed");
+            player.SendMessage("enablePlatformerControlls");
+            mainCamera.SendMessage("setFollowEnabled", true);
+        }
+        if (numberOfMechanicUnlocks >= 4) // unlocks jumping
         {
             print("Jumping unlocked");
             player.SendMessage("setAbilityToJump", true);

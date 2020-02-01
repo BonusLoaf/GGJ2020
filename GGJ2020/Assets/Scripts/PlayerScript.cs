@@ -47,6 +47,11 @@ public class PlayerScript : MonoBehaviour
         gameObject.GetComponent<TopDownMovementScript>().enabled = true;
     }
 
+    public void disableTopDownControlls()
+    {
+        gameObject.GetComponent<TopDownMovementScript>().enabled = false;
+    }
+
     public void enablePlatformerControlls()
     {
         gameObject.GetComponent<TopDownMovementScript>().enabled = false;

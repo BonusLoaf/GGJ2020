@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SmoothCameraFollow : MonoBehaviour
 {
+    public bool followEnabled;
 
     public float followSpeed = 2f;
 
@@ -27,11 +28,18 @@ public class SmoothCameraFollow : MonoBehaviour
     // Update is called once per frame
     private void LateUpdate()
     {
-        if(target)
+        if(target && followEnabled)
         {
             Vector3 targetPos = target.position;
             targetPos.z = -10;
             transform.position = Vector3.Slerp(transform.position, targetPos, followSpeed * Time.deltaTime);
         }
+    }
+
+
+    public void setFollowEnabled(bool newFollowIn)
+    {
+        print("setFollowEnabled(bool newFollowIn)");
+        followEnabled = newFollowIn;
     }
 }
