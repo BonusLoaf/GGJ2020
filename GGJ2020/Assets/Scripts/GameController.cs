@@ -68,7 +68,7 @@ public class GameController : MonoBehaviour
         print(numberOfMechanicUnlocks);
 
 
-        if(numberOfMechanicUnlocks >= 1)
+        if(numberOfMechanicUnlocks >= 1) // unlocks movement
         {
 
             print("Movement Unlocked");
@@ -76,11 +76,16 @@ public class GameController : MonoBehaviour
             PlayerPrefs.SetInt("mechanics", numberOfMechanicUnlocks);
             
         }
-        if(numberOfMechanicUnlocks >= 2)
+        if(numberOfMechanicUnlocks >= 2) // unlocks gravity (switches to platformer script)
         {
             print("Gravity Unlocked");
             player.SendMessage("enablePlatformerControlls");
             player.SendMessage("enableGravity");
+        } 
+        if(numberOfMechanicUnlocks >= 3) // unlocks jumping
+        {
+            print("Jumping unlocked");
+            player.SendMessage("setAbilityToJump", true);
         }
 
 
