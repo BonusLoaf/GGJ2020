@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GlitchParticle
   - DropZone
+  - Enemy
   layers:
   - Default
   - TransparentFX
