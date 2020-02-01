@@ -9,7 +9,7 @@ public class PlatformerMovementScript : MonoBehaviour
 
     public bool jumpEnabled;
 
-    public GameObject raycastOrigin;
+    public GameObject[] raycastOrigin;
     public float raycastLength = 0.01f;
 
     private Rigidbody2D rb;
@@ -61,13 +61,18 @@ public class PlatformerMovementScript : MonoBehaviour
 
     private bool canJump() // Sends Raycast to check if the player is on the floor
     {
-        Debug.DrawRay(raycastOrigin.transform.position, Vector2.down * raycastLength, Color.green, 3f); // draws the raycast
+        //Debug.DrawRay(raycastOrigin.transform.position, Vector2.down * raycastLength, Color.green, 3f); // draws the raycast
 
-        RaycastHit2D hit = Physics2D.Raycast(raycastOrigin.transform.position, Vector2.down, raycastLength);
-        if (hit.collider != null)
+        foreach (GameObject pos in raycastOrigin)
         {
-            return true;
+            Debug.DrawRay(pos.transform.position, Vector2.down * raycastLength, Color.green, 3f); // draws the raycast
+            RaycastHit2D hit = Physics2D.Raycast(pos.transform.position, Vector2.down, raycastLength);
+            if (hit.collider != null)
+            {
+                return true;
+            }
         }
+        
 
 
         return false;
