@@ -52,4 +52,9 @@ public class PlayerScript : MonoBehaviour
         gameObject.GetComponent<TopDownMovementScript>().enabled = false;
         gameObject.GetComponent<PlatformerMovementScript>().enabled = true;
     }
+
+    public void setAbilityToJump(bool canJump)
+    {
+        gameObject.GetComponent<PlatformerMovementScript>().setJumpEnabled(canJump);
+    }
 }
