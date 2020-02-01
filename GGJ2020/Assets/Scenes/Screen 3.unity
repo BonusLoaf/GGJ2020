@@ -2399,6 +2399,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4552211364459498907, guid: 71827796c1abe4d458b48b40e631e0b7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71827796c1abe4d458b48b40e631e0b7, type: 3}
 --- !u!1 &904775281
@@ -4030,6 +4035,7 @@ MonoBehaviour:
   player: {fileID: 916118247}
   mainCamera: {fileID: 1443112579}
   numberOfMechanicUnlocks: 2
+  checkpointPos: {x: 0, y: 0}
 --- !u!4 &1369063784
 Transform:
   m_ObjectHideFlags: 0

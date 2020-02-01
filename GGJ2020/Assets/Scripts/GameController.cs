@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class GameController : MonoBehaviour
@@ -8,17 +9,15 @@ public class GameController : MonoBehaviour
     public GameObject player;
     public GameObject mainCamera;
 
-    private static GameController instance;
 
     public int numberOfMechanicUnlocks = 0;
 
 
-
-    public static GameController Instance;
+    public Vector2 checkpointPos;
 
     private void checkMechs()
     {
-        numberOfMechanicUnlocks = PlayerPrefs.GetInt("mechanics");
+        //numberOfMechanicUnlocks = PlayerPrefs.GetInt("mechanics");
 
         UnlockNextMechanic(0);
     }
@@ -62,6 +61,10 @@ public class GameController : MonoBehaviour
         {
             UnlockNextMechanic(1);
         }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            playerDied();
+        }
     }
 
     public void UnlockNextMechanic(int add)
@@ -98,4 +101,34 @@ public class GameController : MonoBehaviour
 
     }
 
+    public void playerDied()
+    {
+        print("You died");
+
+        StartCoroutine("respawn");
+        
+    }
+
+
+    public void setCheckpointPos(Vector2 newPos)
+    {
+        checkpointPos = newPos;
+    }
+
+
+
+
+    IEnumerator respawn()
+    {
+        yield return new WaitForSeconds(5);
+
+        if (checkpointPos != Vector2.zero) // If the player has reached a checkpoint
+        {
+            player.transform.position = checkpointPos;
+        }
+        else // If the player hasnt reached a checkpoint
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
 }

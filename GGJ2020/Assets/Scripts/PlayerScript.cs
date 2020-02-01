@@ -26,8 +26,12 @@ public class PlayerScript : MonoBehaviour
     {
         if (col.gameObject.tag == "GlitchParticle") // collected glitch particle
         {
-            gc.SendMessage("UnlockNextMechanic", 1);
-            col.SendMessage("collected");
+            Vector2 pos = col.gameObject.transform.position;
+            gc.SendMessage("UnlockNextMechanic", 1); // Tells game manager to unlock the next mechanic
+
+            gc.SendMessage("setCheckpointPos", pos);
+
+            col.SendMessage("collected"); // Tells the glitch particle its been collected
         }
     }
 
