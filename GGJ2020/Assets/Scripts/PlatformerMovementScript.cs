@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlatformerMovementScript : MonoBehaviour
 {
 
+    public Animator emotions;
+
     public float speed = 10;
     public float dashVerticalSpeed;
     public float dashSpeed = 20f;
@@ -66,8 +68,24 @@ public class PlatformerMovementScript : MonoBehaviour
         {
             float x = Input.GetAxis("Horizontal");
             rb.velocity = new Vector2(x * speed, rb.velocity.y);
+
+            if(Input.GetAxisRaw("Horizontal") >= 0.5f)
+            {
+                emotions.SetTrigger("Right");
+            }
+            if (Input.GetAxisRaw("Horizontal") <= -0.5f)
+            {
+                emotions.SetTrigger("Left");
+            }
+            if (Input.GetAxisRaw("Horizontal") == 0f)
+            {
+                emotions.SetTrigger("Centre");
+            }
+
         }
         
+
+
 
         if(Input.GetKeyDown(KeyCode.Space) && jumpEnabled)
         {
@@ -85,7 +103,7 @@ public class PlatformerMovementScript : MonoBehaviour
                     AttemptJump();
                 }
                  
-
+                
             } else
             {
                 AttemptJump();
@@ -105,6 +123,7 @@ public class PlatformerMovementScript : MonoBehaviour
         //print(canJump());
         if(canJump())
         {
+            emotions.SetTrigger("Jump");
             hasDashed = false;
             rb.velocity = new Vector2(0, 10);
         }

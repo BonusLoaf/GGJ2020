@@ -1650,6 +1650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8b5fae4b17d834cb90785b778543b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emotions: {fileID: 0}
   speed: 10
   dashVerticalSpeed: 0
   dashSpeed: 20
@@ -1659,6 +1660,10 @@ MonoBehaviour:
   raycastOrigin:
   - {fileID: 0}
   raycastLength: 0.1
+  characterBody: {fileID: 0}
+  characterRollingBody: {fileID: 0}
+  normalMat: {fileID: 0}
+  bouncyMat: {fileID: 0}
 --- !u!95 &443615402
 Animator:
   serializedVersion: 3
@@ -4432,12 +4437,12 @@ PrefabInstance:
     - target: {fileID: 1211298586501142381, guid: 71827796c1abe4d458b48b40e631e0b7,
         type: 3}
       propertyPath: m_Size.x
-      value: 1.15
+      value: 0.69
       objectReference: {fileID: 0}
     - target: {fileID: 1211298586501142381, guid: 71827796c1abe4d458b48b40e631e0b7,
         type: 3}
       propertyPath: m_Size.y
-      value: 1.0666667
+      value: 0.69
       objectReference: {fileID: 0}
     - target: {fileID: 1211298586501142381, guid: 71827796c1abe4d458b48b40e631e0b7,
         type: 3}
@@ -4592,6 +4597,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4552211364459498907, guid: 71827796c1abe4d458b48b40e631e0b7,
+        type: 3}
+      propertyPath: emotions
+      value: 
+      objectReference: {fileID: 8685249873786560916}
     - target: {fileID: 5398294943230832727, guid: 71827796c1abe4d458b48b40e631e0b7,
         type: 3}
       propertyPath: m_Sprite

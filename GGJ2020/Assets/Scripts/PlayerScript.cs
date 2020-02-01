@@ -29,6 +29,8 @@ public class PlayerScript : MonoBehaviour
     {
         if (col.gameObject.tag == "GlitchParticle") // collected glitch particle
         {
+            emotions.SetTrigger("Yey");
+
             Vector2 pos = col.gameObject.transform.position;
             gc.SendMessage("UnlockNextMechanic", 1); // Tells game manager to unlock the next mechanic
 
