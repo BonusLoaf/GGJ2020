@@ -201,6 +201,7 @@ GameObject:
   - component: {fileID: 1502927296}
   - component: {fileID: 5024403325896194818}
   - component: {fileID: 861985422}
+  - component: {fileID: 861985423}
   m_Layer: 0
   m_Name: RollingChar
   m_TagString: Untagged
@@ -304,6 +305,20 @@ MonoBehaviour:
   rb: {fileID: 0}
   body: {fileID: 1481048438}
   torque: 1000
+--- !u!114 &861985423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502927294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b95edab8dde896b468a59a842ace8e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 500
+  rb: {fileID: 0}
 --- !u!1 &4552211364312326078
 GameObject:
   m_ObjectHideFlags: 0
