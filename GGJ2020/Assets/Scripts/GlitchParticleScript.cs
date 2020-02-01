@@ -27,4 +27,9 @@ public class GlitchParticleScript : MonoBehaviour
     {
         Destroy(this.gameObject);
     }
+
+    public void MoveToPlayer()
+    {
+        GetComponent<Rigidbody2D>().gravityScale = -1;
+    }
 }
