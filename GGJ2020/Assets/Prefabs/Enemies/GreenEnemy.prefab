@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 3376866225983111897}
   - component: {fileID: 3376866225983111896}
   - component: {fileID: 2963163043480933671}
+  - component: {fileID: 977176096}
+  - component: {fileID: 977176095}
   m_Layer: 0
   m_Name: GreenEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8510546662070765434, guid: 0d9bd70f05d39734e896d8ef2e03f749,
+  m_Sprite: {fileID: 8510546662070765434, guid: 6fbf4c503c8551e4cb7d8864c31a40bd,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -93,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 3376866225983111898}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 48150e58ddf15b240a62e6d18181480b, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -102,3 +104,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!70 &977176096
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3376866225983111898}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.06, y: 0.09}
+  m_Size: {x: 2.2, y: 1.96}
+  m_Direction: 1
+--- !u!114 &977176095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3376866225983111898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a0ea28d13ca9a428a433ebef635eaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

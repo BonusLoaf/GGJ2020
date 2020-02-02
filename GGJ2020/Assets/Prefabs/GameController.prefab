@@ -49,6 +49,11 @@ MonoBehaviour:
   glitchWall0: {fileID: 0}
   glitchWall1: {fileID: 0}
   glitchWall2: {fileID: 0}
+  platforms: {fileID: 0}
+  rainbow: {fileID: 0}
+  sky: {fileID: 0}
+  skyline: {fileID: 0}
+  hill: {fileID: 0}
   numberOfMechanicUnlocks: 5
   checkpointPos: {x: 0, y: 0}
 --- !u!114 &1822261118
