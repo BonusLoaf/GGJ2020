@@ -19,7 +19,23 @@ public class EnemyHealth : MonoBehaviour
     public void kill()
     {
         // PLAY NOISE
+        print("Kill()");
+        Destroy(this.gameObject);
+    }
 
-        Destroy(this);
+    /*private void (Collision2D collision)
+    {
+        if(collision.transform.tag == "Ball")
+        {
+            kill();
+        }
+    }*/
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.transform.tag == "Ball")
+        {
+            kill();
+        }
     }
 }
