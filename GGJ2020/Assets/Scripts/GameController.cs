@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour
     public GameObject mainCamera;
     public GameObject health;
 
-    public GameObject UI;
+    //public GameObject UI;
     public GameObject glitchWall0;
     public GameObject glitchWall1;
     public GameObject glitchWall2;
@@ -103,7 +103,7 @@ public class GameController : MonoBehaviour
 
         if(numberOfMechanicUnlocks >= 1) // unlocks movement
         {
-            UI.SendMessage("setMovement");
+            //UI.SendMessage("setMovement");
             print("Movement Unlocked");
             player.SendMessage("enableTopDownControlls");
             //PlayerPrefs.SetInt("mechanics", numberOfMechanicUnlocks);
@@ -113,7 +113,7 @@ public class GameController : MonoBehaviour
         {
 
 
-            UI.SendMessage("setGravity");
+           // UI.SendMessage("setGravity");
             print("Gravity Unlocked");
             
             player.SendMessage("disableTopDownControlls");
@@ -126,7 +126,7 @@ public class GameController : MonoBehaviour
         if (numberOfMechanicUnlocks >= 3) // unlocks camera following
         {
 
-            UI.SendMessage("setCamera");
+            //UI.SendMessage("setCamera");
             print("Camera Fixed");
             player.SendMessage("enablePlatformerControlls");
             mainCamera.SendMessage("setFollowEnabled", true);
@@ -134,28 +134,28 @@ public class GameController : MonoBehaviour
         if (numberOfMechanicUnlocks >= 4) // unlocks jumping
         {
 
-            UI.SendMessage("setJump");
+           // UI.SendMessage("setJump");
             print("Jumping unlocked");
             player.SendMessage("setAbilityToJump", true);
         }
         if (numberOfMechanicUnlocks >= 5) // unlocks jumping
         {
 
-            UI.SendMessage("setFace");
+            ///UI.SendMessage("setFace");
             print("Face Unlocked");
             player.SendMessage("setFace");
         }
         if (numberOfMechanicUnlocks >= 6) // unlocks jumping
         {
 
-            UI.SendMessage("setEmotions");
+            //UI.SendMessage("setEmotions");
             print("Emotions Unlocked");
             player.SendMessage("setOwO");
         }
         if(numberOfMechanicUnlocks >= 7)
         {
 
-            UI.SendMessage("setHealth");
+           // UI.SendMessage("setHealth");
 
             print("Health Unlocked");
 
@@ -168,7 +168,7 @@ public class GameController : MonoBehaviour
         {
 
 
-            UI.SendMessage("setEnemies");
+           // UI.SendMessage("setEnemies");
             print("Enemies Unlocked");
 
             if(glitchWall2)
@@ -178,7 +178,7 @@ public class GameController : MonoBehaviour
         {
 
 
-            UI.SendMessage("setColour");
+           // UI.SendMessage("setColour");
             print("Colour Unlocked");
 
             Color ground = new Color(0.52f, 1f, 0.31f);
@@ -190,7 +190,7 @@ public class GameController : MonoBehaviour
         if (numberOfMechanicUnlocks >= 10)
         {
 
-            UI.SendMessage("setBody");
+           // UI.SendMessage("setBody");
 
             print("Body Unlocked");
             fullPlayer.SetActive(true);
@@ -205,7 +205,7 @@ public class GameController : MonoBehaviour
         {
 
 
-            UI.SendMessage("setTuckspin");
+           // UI.SendMessage("setTuckspin");
             print("Tuckspin Unlocked");
             fullPlayer.SendMessage("setDash", true);
             mainCamera.GetComponent<SmoothCameraFollow>().target = fullPlayer.transform;
@@ -217,7 +217,7 @@ public class GameController : MonoBehaviour
         {
 
 
-            UI.SendMessage("setDetail");
+           // UI.SendMessage("setDetail");
             print("Detail Unlocked");
 
             
