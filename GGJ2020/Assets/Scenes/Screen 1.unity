@@ -845,6 +845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1050856885}
+  fullPlayer: {fileID: 0}
   mainCamera: {fileID: 519420031}
   glitchWall0: {fileID: 0}
   glitchWall1: {fileID: 0}
@@ -852,6 +853,8 @@ MonoBehaviour:
   platforms: {fileID: 0}
   rainbow: {fileID: 0}
   sky: {fileID: 0}
+  skyline: {fileID: 0}
+  hill: {fileID: 0}
   numberOfMechanicUnlocks: 0
   checkpointPos: {x: 0, y: 0}
 --- !u!4 &1369063784

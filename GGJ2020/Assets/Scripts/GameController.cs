@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
     public GameObject player;
     public GameObject fullPlayer;
     public GameObject mainCamera;
-
+    public GameObject health;
 
     public GameObject glitchWall0;
     public GameObject glitchWall1;
@@ -41,7 +41,11 @@ public class GameController : MonoBehaviour
 
         //Invoke("checkMechs", 0.1f);
 
-        if(sky)
+        if (health)
+          health.SetActive(false);
+
+
+        if (sky)
         sky.SetActive(false);
 
 
@@ -139,6 +143,8 @@ public class GameController : MonoBehaviour
         if(numberOfMechanicUnlocks >= 7)
         {
             print("Health Unlocked");
+
+            health.SetActive(true);
 
             if (glitchWall1)
                 glitchWall1.active = false;
