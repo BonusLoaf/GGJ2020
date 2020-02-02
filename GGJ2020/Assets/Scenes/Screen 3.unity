@@ -4498,6 +4498,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1452097760, guid: db63622519f4922448b6a3983d948def, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1601750669, guid: db63622519f4922448b6a3983d948def, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1601750669, guid: db63622519f4922448b6a3983d948def, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4019448519133215516, guid: db63622519f4922448b6a3983d948def,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4562,6 +4574,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019448519133215523, guid: db63622519f4922448b6a3983d948def,
+        type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db63622519f4922448b6a3983d948def, type: 3}
@@ -8376,6 +8393,11 @@ MonoBehaviour:
   glitchWall0: {fileID: 0}
   glitchWall1: {fileID: 12197340}
   glitchWall2: {fileID: 173335437}
+  platforms: {fileID: 0}
+  rainbow: {fileID: 0}
+  sky: {fileID: 0}
+  skyline: {fileID: 0}
+  hill: {fileID: 0}
   numberOfMechanicUnlocks: 2
   checkpointPos: {x: 0, y: 0}
 --- !u!4 &1369063784
