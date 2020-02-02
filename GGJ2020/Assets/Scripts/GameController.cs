@@ -9,6 +9,10 @@ public class GameController : MonoBehaviour
     public GameObject player;
     public GameObject mainCamera;
 
+    public GameObject glitchWall0;
+    public GameObject glitchWall1;
+    public GameObject glitchWall2;
+
 
     public int numberOfMechanicUnlocks = 0;
 
@@ -83,8 +87,13 @@ public class GameController : MonoBehaviour
         if(numberOfMechanicUnlocks >= 2) // unlocks gravity (switches to platformer script)
         {
             print("Gravity Unlocked");
+            
             player.SendMessage("disableTopDownControlls");
             player.SendMessage("enableGravity");
+
+            if(glitchWall0)
+            glitchWall0.active = false;
+
         }
         if (numberOfMechanicUnlocks >= 3) // unlocks camera following
         {
@@ -106,6 +115,16 @@ public class GameController : MonoBehaviour
         {
             print("Emotions Unlocked");
             player.SendMessage("setOwO");
+        }
+        if(numberOfMechanicUnlocks >= 7)
+        {
+            print("Health Unlocked");
+            glitchWall1.active = false;
+        }
+        if (numberOfMechanicUnlocks >= 8)
+        {
+            print("Enemies Unlocked");
+            glitchWall2.active = false;
         }
 
     }
@@ -129,7 +148,7 @@ public class GameController : MonoBehaviour
 
     IEnumerator respawn()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(0);
 
         if (checkpointPos != Vector2.zero) // If the player has reached a checkpoint
         {

@@ -38,10 +38,19 @@ public class PlayerScript : MonoBehaviour
 
             col.SendMessage("collected"); // Tells the glitch particle its been collected
         }
+        else if(col.gameObject.tag == "GlitchWall")
+        {
+
+            gc.SendMessage("playerDied");
+
+        }
+
+
     }
 
     public void enableGravity()
     {
+        gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         gameObject.GetComponent<Rigidbody2D>().gravityScale = 2;
     }
 
@@ -63,6 +72,8 @@ public class PlayerScript : MonoBehaviour
 
     public void enablePlatformerControlls()
     {
+        
+
         gameObject.GetComponent<TopDownMovementScript>().enabled = false;
         gameObject.GetComponent<PlatformerMovementScript>().enabled = true;
     }

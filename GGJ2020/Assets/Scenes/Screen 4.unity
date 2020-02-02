@@ -1637,7 +1637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gc: {fileID: 1369063782}
-  face: {fileID: 0}
+  emotions: {fileID: 0}
 --- !u!114 &443615401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1650,6 +1650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8b5fae4b17d834cb90785b778543b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emotions: {fileID: 0}
   speed: 10
   dashVerticalSpeed: 0
   dashSpeed: 20
@@ -1659,6 +1660,10 @@ MonoBehaviour:
   raycastOrigin:
   - {fileID: 0}
   raycastLength: 0.1
+  characterBody: {fileID: 0}
+  characterRollingBody: {fileID: 0}
+  normalMat: {fileID: 0}
+  bouncyMat: {fileID: 0}
 --- !u!95 &443615402
 Animator:
   serializedVersion: 3
@@ -3986,22 +3991,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 2298f44cd28f1274181f73390c6080f1,
+      objectReference: {fileID: 21300000, guid: d2cd749c53dd4e74394a74db09fa70e9,
         type: 3}
     - target: {fileID: 4552211364459498880, guid: 71827796c1abe4d458b48b40e631e0b7,
         type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.44313726
       objectReference: {fileID: 0}
     - target: {fileID: 4552211364459498880, guid: 71827796c1abe4d458b48b40e631e0b7,
         type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.44313726
       objectReference: {fileID: 0}
     - target: {fileID: 4552211364459498880, guid: 71827796c1abe4d458b48b40e631e0b7,
         type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.44313726
       objectReference: {fileID: 0}
     - target: {fileID: 4552211364459498881, guid: 71827796c1abe4d458b48b40e631e0b7,
         type: 3}
@@ -6781,6 +6786,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 916118247}
   mainCamera: {fileID: 1443112579}
+  glitchWall1: {fileID: 0}
+  glitchWall2: {fileID: 0}
   numberOfMechanicUnlocks: 5
   checkpointPos: {x: 0, y: 0}
 --- !u!4 &1369063784
