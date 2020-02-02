@@ -136,7 +136,7 @@ PrefabInstance:
     - target: {fileID: 4552211364459498881, guid: 8b0651d7375dbb84fa368ceed8fe5812,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.545
+      value: -0.168
       objectReference: {fileID: 0}
     - target: {fileID: 4552211364459498881, guid: 8b0651d7375dbb84fa368ceed8fe5812,
         type: 3}
@@ -193,6 +193,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerWithBody
       objectReference: {fileID: 0}
+    - target: {fileID: 4552211364459498907, guid: 8b0651d7375dbb84fa368ceed8fe5812,
+        type: 3}
+      propertyPath: characterFace
+      value: 
+      objectReference: {fileID: 1585830113}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b0651d7375dbb84fa368ceed8fe5812, type: 3}
 --- !u!1 &1347710792 stripped
@@ -451,7 +456,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511270360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.32, y: -1.88, z: -1.0885408}
+  m_LocalPosition: {x: -4.32, y: -1.63, z: -1.0885408}
   m_LocalScale: {x: 8.46, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -582,6 +587,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4627477816319692024, guid: 0e47345aaa533524392dc32e97f1aa3e,
     type: 3}
   m_PrefabInstance: {fileID: 1564958563}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1585830113 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4358842654601514924, guid: 8b0651d7375dbb84fa368ceed8fe5812,
+    type: 3}
+  m_PrefabInstance: {fileID: 1347710791}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1689124170
 GameObject:
@@ -775,6 +786,11 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 4019448518677086205}
+    - target: {fileID: 6026200313010407151, guid: 0b4c3b306bcfcc84a98937ec2ff0dce0,
+        type: 3}
+      propertyPath: numberOfMechanicUnlocks
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b4c3b306bcfcc84a98937ec2ff0dce0, type: 3}
 --- !u!1 &1822261117 stripped

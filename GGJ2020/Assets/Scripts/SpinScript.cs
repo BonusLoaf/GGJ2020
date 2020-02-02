@@ -41,6 +41,7 @@ public class SpinScript : MonoBehaviour
             Debug.LogError("Error: SpinScript on characters spinbody cannot find the characters rigid body");
         }
 
+
         //print("rb.velocity.x: " + rb.velocity.x);
         
     }

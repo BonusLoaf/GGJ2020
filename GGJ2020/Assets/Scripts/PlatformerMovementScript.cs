@@ -24,6 +24,7 @@ public class PlatformerMovementScript : MonoBehaviour
     // Only for once the player has unlocked the characters full body
     public GameObject characterBody;
     public GameObject characterRollingBody;
+    public SpriteRenderer characterFace;
 
     public PhysicsMaterial2D normalMat;
     public PhysicsMaterial2D bouncyMat;
@@ -46,10 +47,10 @@ public class PlatformerMovementScript : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
 
 
-        if((dashEnabled && characterBody && characterRollingBody))
+        if((dashEnabled && characterBody && characterRollingBody && characterFace))
         {
-            characterBody.SetActive(true);
-            characterRollingBody.SetActive(false);
+            switchToNormalBody();
+            
         } else
         {
             Debug.LogError("Error: dashing is enabled and no reference to the characters full body/ rolling child gameobject is found");
@@ -196,8 +197,9 @@ public class PlatformerMovementScript : MonoBehaviour
 
     public void switchToNormalBody()
     {
-        if(characterBody && characterRollingBody)
+        if(characterBody && characterRollingBody && characterFace)
         {
+            characterFace.enabled = true;
             characterBody.SetActive(true);
             characterRollingBody.SetActive(false);
         } else
@@ -208,8 +210,9 @@ public class PlatformerMovementScript : MonoBehaviour
 
     public void switchToRollingBody()
     {
-        if (characterBody && characterRollingBody)
+        if (characterBody && characterRollingBody && characterFace)
         {
+            characterFace.enabled = false;
             characterBody.SetActive(false);
             characterRollingBody.SetActive(true);
         } else 
