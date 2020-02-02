@@ -7,7 +7,9 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public GameObject player;
+    public GameObject fullPlayer;
     public GameObject mainCamera;
+
 
     public GameObject glitchWall0;
     public GameObject glitchWall1;
@@ -49,6 +51,10 @@ public class GameController : MonoBehaviour
 
         if (hill)
             hill.SetActive(false);
+
+
+        if (fullPlayer)
+            fullPlayer.SetActive(false);
 
         UnlockNextMechanic(0);
         
@@ -146,12 +152,6 @@ public class GameController : MonoBehaviour
         }
         if (numberOfMechanicUnlocks >= 9)
         {
-            print("Body Unlocked");
-
-
-        }
-        if (numberOfMechanicUnlocks >= 10)
-        {
             print("Colour Unlocked");
 
             Color ground = new Color(0.52f, 1f, 0.31f);
@@ -160,17 +160,31 @@ public class GameController : MonoBehaviour
             platforms.GetComponent<SpriteRenderer>().color = ground;
             rainbow.GetComponent<SpriteRenderer>().color = Color.white;
         }
+        if (numberOfMechanicUnlocks >= 10)
+        {
+            print("Body Unlocked");
+            fullPlayer.SetActive(true);
+            player.SetActive(false);
+            
+            fullPlayer.SendMessage("setFace");
+            fullPlayer.SendMessage("setOwO");
+            mainCamera.GetComponent<SmoothCameraFollow>().target = fullPlayer.transform;
+            fullPlayer.SendMessage("setDash", false);
+        }
         if (numberOfMechanicUnlocks >= 11)
         {
             print("Tuckspin Unlocked");
-
+            fullPlayer.SendMessage("setDash", true);
+            mainCamera.GetComponent<SmoothCameraFollow>().target = fullPlayer.transform;
+            fullPlayer.SendMessage("setFace");
+            fullPlayer.SendMessage("setOwO");
 
         }
         if (numberOfMechanicUnlocks >= 12)
         {
             print("Detail Unlocked");
 
-
+            
             hill.SetActive(true);
             skyline.SetActive(true);
         }

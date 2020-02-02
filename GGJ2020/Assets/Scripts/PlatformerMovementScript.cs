@@ -158,6 +158,15 @@ public class PlatformerMovementScript : MonoBehaviour
         return false;
     }
 
+
+    public void setDash(bool d)
+    {
+
+        dashEnabled = d;
+
+
+    }
+
     private void dash()
     {
         canWalk = false;
