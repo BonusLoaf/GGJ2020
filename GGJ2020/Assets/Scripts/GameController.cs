@@ -12,7 +12,11 @@ public class GameController : MonoBehaviour
     public GameObject glitchWall0;
     public GameObject glitchWall1;
     public GameObject glitchWall2;
-
+    public GameObject platforms;
+    public GameObject rainbow;
+    public GameObject sky;
+    public GameObject skyline;
+    public GameObject hill;
 
     public int numberOfMechanicUnlocks = 0;
 
@@ -35,6 +39,16 @@ public class GameController : MonoBehaviour
 
         //Invoke("checkMechs", 0.1f);
 
+        if(sky)
+        sky.SetActive(false);
+
+
+        if (skyline)
+        skyline.SetActive(false);
+
+
+        if (hill)
+            hill.SetActive(false);
 
         UnlockNextMechanic(0);
         
@@ -119,12 +133,46 @@ public class GameController : MonoBehaviour
         if(numberOfMechanicUnlocks >= 7)
         {
             print("Health Unlocked");
-            glitchWall1.active = false;
+
+            if (glitchWall1)
+                glitchWall1.active = false;
         }
         if (numberOfMechanicUnlocks >= 8)
         {
             print("Enemies Unlocked");
+
+            if(glitchWall2)
             glitchWall2.active = false;
+        }
+        if (numberOfMechanicUnlocks >= 9)
+        {
+            print("Body Unlocked");
+
+
+        }
+        if (numberOfMechanicUnlocks >= 10)
+        {
+            print("Colour Unlocked");
+
+            Color ground = new Color(0.52f, 1f, 0.31f);
+
+            sky.SetActive(true);
+            platforms.GetComponent<SpriteRenderer>().color = ground;
+            rainbow.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+        if (numberOfMechanicUnlocks >= 11)
+        {
+            print("Tuckspin Unlocked");
+
+
+        }
+        if (numberOfMechanicUnlocks >= 12)
+        {
+            print("Detail Unlocked");
+
+
+            hill.SetActive(true);
+            skyline.SetActive(true);
         }
 
     }

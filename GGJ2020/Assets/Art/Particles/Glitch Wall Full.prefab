@@ -3,8 +3,7 @@
 --- !u!1 &358029141638320258
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 8323099766103189055, guid: a22bc63b5bd6ce440a802f5e2df815d4,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
@@ -22,8 +21,7 @@ GameObject:
 --- !u!4 &1942305119957206616
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 8323099766103189048, guid: a22bc63b5bd6ce440a802f5e2df815d4,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 358029141638320258}
@@ -37,8 +35,7 @@ Transform:
 --- !u!198 &8933123976288131088
 ParticleSystem:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 8323099766103189049, guid: a22bc63b5bd6ce440a802f5e2df815d4,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 358029141638320258}
@@ -4698,8 +4695,7 @@ ParticleSystem:
 ParticleSystemRenderer:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 8323099766103189054, guid: a22bc63b5bd6ce440a802f5e2df815d4,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 358029141638320258}
@@ -4762,8 +4758,7 @@ ParticleSystemRenderer:
 --- !u!1 &5770594240531360941
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 6378489246637963805, guid: a22bc63b5bd6ce440a802f5e2df815d4,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
@@ -4781,8 +4776,7 @@ GameObject:
 --- !u!4 &5770594240531360938
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 6378489246637963802, guid: a22bc63b5bd6ce440a802f5e2df815d4,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5770594240531360941}
@@ -4796,8 +4790,7 @@ Transform:
 --- !u!198 &5770594240531360939
 ParticleSystem:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 6378489246637963803, guid: a22bc63b5bd6ce440a802f5e2df815d4,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5770594240531360941}
@@ -9457,8 +9450,7 @@ ParticleSystem:
 ParticleSystemRenderer:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 6378489246637963804, guid: a22bc63b5bd6ce440a802f5e2df815d4,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5770594240531360941}
@@ -9530,7 +9522,7 @@ GameObject:
   - component: {fileID: 6748419789501028182}
   m_Layer: 0
   m_Name: Glitch Wall Full
-  m_TagString: Untagged
+  m_TagString: GlitchWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

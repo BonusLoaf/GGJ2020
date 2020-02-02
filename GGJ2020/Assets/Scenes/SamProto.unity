@@ -1197,6 +1197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gc: {fileID: 1369063782}
+  emotions: {fileID: 0}
 --- !u!114 &443615401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1209,11 +1210,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8b5fae4b17d834cb90785b778543b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emotions: {fileID: 0}
   speed: 10
+  dashVerticalSpeed: 0
+  dashSpeed: 20
   jumpEnabled: 1
+  dashEnabled: 0
+  canWalk: 0
   raycastOrigin:
   - {fileID: 0}
   raycastLength: 0.1
+  characterBody: {fileID: 0}
+  characterRollingBody: {fileID: 0}
+  normalMat: {fileID: 0}
+  bouncyMat: {fileID: 0}
 --- !u!95 &443615402
 Animator:
   serializedVersion: 3
@@ -1243,7 +1253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 481303252}
   m_Layer: 0
-  m_Name: Basic Enemy Point (3)
+  m_Name: Diamond Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4656,7 +4666,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 916118247}
   mainCamera: {fileID: 1443112579}
+  glitchWall0: {fileID: 0}
+  glitchWall1: {fileID: 0}
+  glitchWall2: {fileID: 0}
   numberOfMechanicUnlocks: 2
+  checkpointPos: {x: 0, y: 0}
 --- !u!4 &1369063784
 Transform:
   m_ObjectHideFlags: 0

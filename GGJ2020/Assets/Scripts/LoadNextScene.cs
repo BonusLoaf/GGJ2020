@@ -21,7 +21,7 @@ public class LoadNextScene : MonoBehaviour
     {
 
 
-        if(collision.transform.name == "Player")
+        if(collision.transform.tag == "Player")
         {
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

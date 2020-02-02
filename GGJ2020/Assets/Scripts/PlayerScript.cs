@@ -38,7 +38,8 @@ public class PlayerScript : MonoBehaviour
 
             col.SendMessage("collected"); // Tells the glitch particle its been collected
         }
-        else if(col.gameObject.tag == "GlitchWall")
+
+        if (col.gameObject.tag == "GlitchWall")
         {
 
             gc.SendMessage("playerDied");
