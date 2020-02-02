@@ -216,11 +216,12 @@ public class GameController : MonoBehaviour
 
     IEnumerator respawn()
     {
-        yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(0.5f);
 
         if (checkpointPos != Vector2.zero) // If the player has reached a checkpoint
         {
             player.transform.position = checkpointPos;
+            GetComponent<HealthSystem>().SetLives(3);
         }
         else // If the player hasnt reached a checkpoint
         {
