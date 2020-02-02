@@ -65,6 +65,7 @@
     <Compile Include="Assets\BallMovementScript.cs" />
     <Compile Include="Assets\EnemyPatrol.cs" />
     <Compile Include="Assets\HealthSystem.cs" />
+    <Compile Include="Assets\HealthSystemUI.cs" />
     <Compile Include="Assets\Scripts\Draggable.cs" />
     <Compile Include="Assets\Scripts\DropZone.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />

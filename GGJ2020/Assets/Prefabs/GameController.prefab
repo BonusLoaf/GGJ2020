@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6026200313010407136}
   - component: {fileID: 6026200313010407151}
+  - component: {fileID: 1822261118}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -24,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6026200313010407150}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.30690145, y: 0.19995321, z: -0.7265625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -45,3 +46,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   mainCamera: {fileID: 0}
+  numberOfMechanicUnlocks: 10
+  checkpointPos: {x: 0, y: 0}
+--- !u!114 &1822261118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6026200313010407150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7476b1658d6e1f4fadaaf513ccc7d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gc: {fileID: 6026200313010407151}
+  lives: 0
+  UI: {fileID: 0}

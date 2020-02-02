@@ -447,7 +447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8b5fae4b17d834cb90785b778543b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emotions: {fileID: 0}
+  emotions: {fileID: 1879770203489514250}
   speed: 10
   dashVerticalSpeed: 250
   dashSpeed: 1000
