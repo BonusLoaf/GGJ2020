@@ -24,6 +24,7 @@ public class PlatformerMovementScript : MonoBehaviour
     // Only for once the player has unlocked the characters full body
     public GameObject characterBody;
     public GameObject characterRollingBody;
+    //public SpriteRenderer characterFace;
 
     public PhysicsMaterial2D normalMat;
     public PhysicsMaterial2D bouncyMat;
@@ -48,8 +49,8 @@ public class PlatformerMovementScript : MonoBehaviour
 
         if((dashEnabled && characterBody && characterRollingBody))
         {
-            characterBody.SetActive(true);
-            characterRollingBody.SetActive(false);
+            switchToNormalBody();
+            
         } else
         {
             Debug.LogError("Error: dashing is enabled and no reference to the characters full body/ rolling child gameobject is found");
@@ -136,8 +137,12 @@ public class PlatformerMovementScript : MonoBehaviour
 
     private bool canJump() // Sends Raycast to check if the player is on the floor
     {
-        //Debug.DrawRay(raycastOrigin.transform.position, Vector2.down * raycastLength, Color.green, 3f); // draws the raycast
+        return isTouchingGround();
+    }
 
+
+    public bool isTouchingGround()
+    {
         foreach (GameObject pos in raycastOrigin)
         {
             Debug.DrawRay(pos.transform.position, Vector2.down * raycastLength, Color.green, 3f); // draws the raycast
@@ -147,7 +152,7 @@ public class PlatformerMovementScript : MonoBehaviour
                 return true;
             }
         }
-        
+
 
 
         return false;
@@ -198,7 +203,8 @@ public class PlatformerMovementScript : MonoBehaviour
     {
         if(characterBody && characterRollingBody)
         {
-            characterBody.SetActive(true);
+            //characterFace.enabled = true;
+            characterBody.SendMessage("showCharacter");
             characterRollingBody.SetActive(false);
         } else
         {
@@ -210,7 +216,8 @@ public class PlatformerMovementScript : MonoBehaviour
     {
         if (characterBody && characterRollingBody)
         {
-            characterBody.SetActive(false);
+            //characterFace.enabled = false;
+            characterBody.SendMessage("hideCharacter"); 
             characterRollingBody.SetActive(true);
         } else 
         {
