@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\EnemyHealth.cs" />
+    <Compile Include="Assets\PlayerHealthScript.cs" />
     <Compile Include="Assets\Scripts\BodyController.cs" />
     <Compile Include="Assets\Scripts\Draggable.cs" />
     <Compile Include="Assets\Scripts\DropZone.cs" />

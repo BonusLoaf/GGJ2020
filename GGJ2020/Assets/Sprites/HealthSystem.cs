@@ -23,6 +23,7 @@ public class HealthSystem : MonoBehaviour
     public void SetLives(int newLives)
     {
         lives = newLives;
+        updateUI();
     }
 
     public void loseLife()
